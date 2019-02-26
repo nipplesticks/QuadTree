@@ -1,0 +1,6 @@
+[submodule "QuadTree/QuadTree/SubModules/DMath"]
+	path = QuadTree/QuadTree/SubModules/DMath
+	url = https://github.com/nipplesticks/DMath.git
+[submodule "QuadTree/QuadTree/SubModules/Timer"]
+	path = QuadTree/QuadTree/SubModules/Timer
+	url = https://github.com/nipplesticks/Timer.git
