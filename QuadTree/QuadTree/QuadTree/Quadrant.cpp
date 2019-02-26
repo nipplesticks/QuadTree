@@ -89,7 +89,6 @@ Quadrant & Quadrant::operator=(const Quadrant & other)
 		_copy(other);
 	}
 
-
 	return *this;
 }
 

@@ -1,5 +1,4 @@
 #pragma once
-#include <SFML/System/Vector2.hpp>
 #include "Quadrant.h"
 
 enum Direction
@@ -20,9 +19,9 @@ public:
 	QuadTree();
 	~QuadTree();
 
-	void BuildTree(unsigned int maxLevel, unsigned int worldSize, const sf::Vector2f & startPos);
+	void BuildTree(unsigned int maxLevel, unsigned int worldSize, const DM::Vec2f & startPos);
 
-	Quadrant * GetQuadrant(const sf::Vector2f & worldPos, unsigned int level);
+	Quadrant * GetQuadrant(const DM::Vec2f & worldPos, unsigned int level);
 	
 	Quadrant * GetQuadrantFrom(Quadrant * refQuadrant, Direction dir);
 
@@ -41,6 +40,6 @@ private:
 	unsigned int m_maximumLevel;
 
 private:
-	size_t _GetQuadrantIndex(const sf::Vector2f & worldPos, unsigned int level);
+	size_t _GetQuadrantIndex(const DM::Vec2f & worldPos, unsigned int level);
 };
 
