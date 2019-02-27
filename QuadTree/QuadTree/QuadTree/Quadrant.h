@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "StaticObject.h"
 #include <DMath/DMath.h>
 
 class Quadrant
@@ -37,6 +38,8 @@ public:
 
 	Quadrant & operator=(const Quadrant & other);
 
+	bool ContainsObjects() const;
+
 	std::string ToString() const;
 
 private:
@@ -50,6 +53,8 @@ private:
 	float m_size;
 
 	unsigned int m_level;
+
+	std::vector<StaticObject> m_staticOBjects;
 
 	bool m_isLeaf;
 private:

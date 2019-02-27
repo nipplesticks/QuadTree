@@ -19,11 +19,15 @@ public:
 	QuadTree();
 	~QuadTree();
 
-	void BuildTree(unsigned int maxLevel, unsigned int worldSize, const DM::Vec2f & startPos);
+	void BuildTree(unsigned int maxLevel, unsigned int worldSize, const DM::Vec2f & worldStart);
+	void BuildTree(unsigned int maxLevel, unsigned int worldSize, float worldStartX, float worldStartY);
 
 	Quadrant * GetQuadrant(const DM::Vec2f & worldPos, unsigned int level);
 	
 	Quadrant * GetQuadrantFrom(Quadrant * refQuadrant, Direction dir);
+
+	int RegisterStaticObject(StaticObject * object);
+	void UnregisterStaticObject(StaticObject * object, int address);
 
 	unsigned int GetWorldSize() const;
 	unsigned int GetMaxTreeLevel() const;

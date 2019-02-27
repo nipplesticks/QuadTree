@@ -92,6 +92,11 @@ Quadrant & Quadrant::operator=(const Quadrant & other)
 	return *this;
 }
 
+bool Quadrant::ContainsObjects() const
+{
+	return !m_staticOBjects.empty();
+}
+
 std::string Quadrant::ToString() const
 {
 	std::string str = "";

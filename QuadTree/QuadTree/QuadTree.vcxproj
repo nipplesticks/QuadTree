@@ -119,9 +119,11 @@
   <ItemGroup>
     <ClCompile Include="QuadTree\Quadrant.cpp" />
     <ClCompile Include="QuadTree\QuadTree.cpp" />
+    <ClCompile Include="QuadTree\StaticObject.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="QuadTree\StaticObject.h" />
     <ClInclude Include="QuadTree\Quadrant.h" />
     <ClInclude Include="QuadTree\QuadTree.h" />
     <ClInclude Include="SubModules\DMath\DMath.h" />

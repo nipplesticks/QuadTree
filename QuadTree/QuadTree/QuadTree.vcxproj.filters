@@ -24,6 +24,9 @@
     <ClCompile Include="QuadTree\QuadTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QuadTree\StaticObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuadTree\Quadrant.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SubModules\Timer\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree\StaticObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

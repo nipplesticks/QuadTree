@@ -8,25 +8,6 @@ QuadTree::~QuadTree()
 {
 }
 
-//void QuadGrid::BuildTree(unsigned int maxLevel, unsigned int worldSize, const sf::Vector2f & startPos)
-//{
-//	m_quadTree.clear();
-//	m_maximumLevel = maxLevel;
-//	m_worldSize = worldSize;
-//
-//	size_t numberOfQuadrants = 0;
-//
-//	for (unsigned int level = 0; level <= maxLevel; level++)
-//	{
-//		numberOfQuadrants += (unsigned int)std::pow(4, level);
-//	}
-//
-//	m_quadTree = std::vector<Quadrant>(numberOfQuadrants);
-//
-//	Quadrant q;
-//	q.Build(startPos, sf::Vector2f(worldSize, worldSize), 0, maxLevel, m_quadTree, 0);
-//}
-
 void QuadTree::BuildTree(unsigned int maxLevel, unsigned int worldSize, const DM::Vec2f & startPos)
 {
 	m_quadTree.clear();
@@ -70,6 +51,11 @@ void QuadTree::BuildTree(unsigned int maxLevel, unsigned int worldSize, const DM
 			}
 		}
 	}
+}
+
+void QuadTree::BuildTree(unsigned int maxLevel, unsigned int worldSize, float worldStartX, float worldStartY)
+{
+	BuildTree(maxLevel, worldSize, DM::Vec2f(worldStartX, worldStartY));
 }
 
 Quadrant * QuadTree::GetQuadrant(const DM::Vec2f & worldPos, unsigned int level)
@@ -122,6 +108,18 @@ Quadrant * QuadTree::GetQuadrantFrom(Quadrant * refQuadrant, Direction dir)
 	}
 
 	return GetQuadrant(searchPos, refQuadrant->GetLevel());
+}
+
+int QuadTree::RegisterStaticObject(StaticObject * object)
+{
+	
+
+	return 0;
+}
+
+void QuadTree::UnregisterStaticObject(StaticObject * object, int address)
+{
+
 }
 
 unsigned int QuadTree::GetWorldSize() const
